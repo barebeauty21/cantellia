@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glad2Glow - Centella Acne Set</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f2fcf4;
+      color: #2e2e2e;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #d6f5e3;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+      color: #1e4620;
+    }
+    header p {
+      font-size: 18px;
+      color: #357b52;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 10px;
+    }
+    .content { max-width: 500px; }
+    .content h2 {
+      color: #218c74;
+      margin-bottom: 15px;
+    }
+    .content ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      padding: 14px 24px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover { background: #219150; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+      margin: 30px 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Overlay zoom */
+    .overlay {
+      position: fixed;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 10000;
+    }
+    .overlay img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+    .close-btn {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+      z-index: 10001;
+    }
+
+    .testimonials {
+      background: #eafaf1;
+      padding: 40px 20px;
+    }
+    .testimonials h3 {
+      text-align: center;
+      color: #1f5535;
+      font-size: 24px;
+    }
+    .testimonial {
+      max-width: 700px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .testimonial b {
+      display: block;
+      margin-top: 10px;
+      color: #555;
+    }
+    .notif {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #ffffff;
+      color: #333;
+      padding: 12px 18px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      font-size: 14px;
+      display: none;
+      animation: fadeInOut 5s ease-in-out;
+      z-index: 9999;
+    }
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(20px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(20px); }
+    }
+    @media (max-width: 768px) {
+      .container { flex-direction: column; text-align: center; }
+      .content { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌿 Centella Acne Set 2in1</h1>
+  <p><strong>Jerawat Nyerah, Kulitmu Menang!</strong> Formula calming & powerful — cocok buat kulit sensitif!</p>
+</header>
+
+<div class="container">
+  <img src="1.jpg" alt="Centella Set">
+  <div class="content">
+    <h2>Kenapa kamu HARUS punya ini?</h2>
+    <ul>
+      <li>🌱 <strong>Centella Asiatica</strong>: Bantu redakan kemerahan & jerawat</li>
+      <li>💧 <strong>Allantoin</strong>: Melembapkan & perbaiki skin barrier</li>
+      <li>🚫 Ringan, cepat menyerap, dan nyaman dipakai siang-malam</li>
+      <li>💚 Aman untuk kulit sensitif & berjerawat</li>
+    </ul>
+    <a href="https://wa.me/6281350803724" class="btn">Beli Sekarang via WhatsApp</a>
+
+    <h3 style="margin-top:40px; color:#218c74;">Lihat lebih dekat produknya ✨</h3>
+    <div class="gallery">
+      <img src="/moist.jpg" alt="Galeri 1" onclick="zoomImage(this.src)">
+      <img src="/serum.PNG" alt="Galeri 2" onclick="zoomImage(this.src)">
+    </div>
+  </div>
+</div>
+
+<div class="testimonials">
+  <h3>Apa kata mereka?</h3>
+  <div class="testimonial">“Aku coba bundle Centella ini dan dalam seminggu jerawatku mulai tenang, kulit juga nggak kering. Holy grail!”<b>- Rina, Jakarta</b></div>
+  <div class="testimonial">“Biasanya aku takut pakai produk baru karena kulitku sensitif. Tapi Glad2Glow Centella bener-bener calming banget!”<b>- Dwi, Bandung</b></div>
+  <div class="testimonial">“Serumnya ringan banget dan cepat menyerap. Setelah 2 minggu, tekstur kulitku jauh lebih halus.”<b>- Ayu, Surabaya</b></div>
+  <div class="testimonial">“Jerawat hormonal yang muncul tiap bulan sekarang nggak separah dulu setelah pakai ini.”<b>- Nia, Depok</b></div>
+</div>
+
+<div id="notif" class="notif"></div>
+
+<!-- Overlay Zoom -->
+<div id="overlay" class="overlay" onclick="closeZoom()">
+  <span class="close-btn" onclick="closeZoom()">×</span>
+  <img id="zoomed-img" src="" alt="Zoomed Product" />
+</div>
+
+<script>
+  const names = [
+    "Ayu dari Bandung", "Lia dari Jakarta", "Nina dari Surabaya",
+    "Dewi dari Bali", "Tika dari Depok", "Rina dari Medan",
+    "Nadya dari Jogja", "Mira dari Semarang"
+  ];
+  function showFakeOrder() {
+    const name = names[Math.floor(Math.random() * names.length)];
+    const notif = document.getElementById("notif");
+    notif.innerText = `${name} baru saja membeli Centella Acne Set 🎉`;
+    notif.style.display = "block";
+    notif.style.animation = "fadeInOut 5s ease-in-out";
+    setTimeout(() => notif.style.display = "none", 5000);
+  }
+  window.onload = () => setInterval(showFakeOrder, 10000);
+
+  function zoomImage(src) {
+    document.getElementById("zoomed-img").src = src;
+    document.getElementById("overlay").style.display = "flex";
+  }
+  function closeZoom() {
+    document.getElementById("overlay").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
